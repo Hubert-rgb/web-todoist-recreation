@@ -1,0 +1,103 @@
+.sideBar{
+    background-color: #242424;
+    display: block;
+    position: fixed;
+    width: 18em;
+    height: 100%;
+}
+.sideBar p{
+    margin: 0;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Noto,Oxygen-Sans,Ubuntu,
+    Cantrell,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji",
+    "Segoe UI Symbol";
+    color: rgb(226, 226, 226);
+    font-size: 14px;
+}
+.sideBar svg{
+    width: 20px;
+    height: 20px;
+}
+.selectInbox{
+    display: flex;
+    align-items: center;
+}
+.selectToday{
+    display: flex;
+    align-items: center;
+}
+.selectUpcoming{
+    display: flex;
+    align-items: center;
+}
+.selectFiltersAndLabels{
+    display: flex;
+    align-items: center;
+}
+.constantElements{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: .6em;
+}
+.constantElements > div{
+    width: 90%;
+}
+.constantElements > div:hover{
+    background-color: #363636;
+    border-radius: 5px;
+}
+.constantElements span{
+    padding: 7px;
+    font-size: 20px;
+}
+.constantElements svg{
+    padding: 7px;
+}
+.selectInbox > span{
+    color: #2b73e0;
+}
+.selectToday > span{
+    color: #1c8c3a;
+}
+.selectUpcoming > span{
+    color: #a970ff;
+}
+.icon{
+    fill: #c77100;
+}
+.constantElements{
+    margin-bottom: 30px;
+}
+.projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.projectsLabel{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+.projectsLabel > p{
+    color: #9c9f9f;
+    font-weight: 700;
+    padding: 3px;
+}
+.projectsLabel > .right{
+    display: none;
+}
+.projectsLabel:hover > .right{
+    display: flex;
+}
+.projectsLabel span{
+    padding: 0;
+    color: #9c9f9f;
+    font-size: 23px;
+    font-weight: 300;
+}
+.projectsLabel span:hover{
+    background-color: transparent;
+    color: rgb(226, 226, 226);
+}

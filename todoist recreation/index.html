@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="inbox.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -38,9 +44,11 @@
             <span class="material-symbols-outlined">add</span>
             <div class="productivity">
                 <span class="material-symbols-outlined">trending_up</span>
-                <p id="productivityIndex">0</p>
-                <p>/</p>
-                <p id="productivityGoal">5</p>
+                <div class="productivityIndexPresentation">
+                    <p id="productivityIndex">0</p>
+                    <p>/</p>
+                    <p id="productivityGoal">5</p>
+                </div>
             </div>
             <span class="material-symbols-outlined">help</span>
             <span class="material-symbols-outlined">notifications</span>
@@ -48,7 +56,37 @@
         </div>
     </div>
     <div class="sideBar">
-
+        <div class="constantElements">
+            <div class="selectInbox">
+                <span class="material-symbols-outlined">inbox</span>
+                <p>Inbox</p>
+            </div>
+            <div class="selectToday">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <p id="currentDate"></p>
+                <p>Today</p>
+            </div>
+            <div class="selectUpcoming">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <p>Upcoming</p>
+            </div>
+            <div class="selectFiltersAndLabels">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <path d="M464 144H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H212V212h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H612V212h200v200zM464 544H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H212V612h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H612V612h200v200z"/>
+                </svg>
+                <p>Filters & Labels</p>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="projectsLabel">
+                <p>Projects</p>
+                <div class="right">
+                    <span class="material-symbols-outlined">add</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </div>
+            </div>
+            
+        </div>
     </div>
     <div class="inbox">
 
