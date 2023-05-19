@@ -1,0 +1,119 @@
+.navbar{
+    padding-left: 17px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsla(0,0%,100%,.87);
+}
+.upgradeToPro > span {
+    color: #ffd093;
+    font-variation-settings:
+    'FILL' 1;
+}
+.navbar > div {
+    margin: 6px;
+}
+.navbar span{
+    font-weight: 200;
+    font-size: 25px;
+    color: hsla(0,0%,100%,.87);
+}
+.left > span:hover {
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.left > span {
+    padding: 2px;
+    margin: 1px;
+}
+.insertionSection > input::placeholder{
+    color: #ffff;
+}
+.insertionSection span{
+    color: #ffff;
+    margin: 3px;
+}
+.insertionSection:hover > input::placeholder{
+    color: #a3a3a3;
+}
+.insertionSection:hover span{
+    color: #a3a3a3;
+}
+.insertionSection:hover > input::placeholder{
+    color: #a3a3a3;
+}
+.insertionSection.insertionSection:has(input:focus) span{
+    color: #a3a3a3;
+}
+.insertionSection.insertionSection:has(input:focus) input::placeholder{
+    color: #a3a3a3;
+}
+.navbar p {
+    margin: 0;
+}
+.navbar > .right{
+    display: flex;
+    align-items: center;
+}
+.navbar > .left{
+    display: flex;
+    align-items: center;
+}
+
+.upgradeToPro{
+    display: flex;
+    align-items: center;
+}
+.productivity{
+    display: flex;
+    align-items: center;
+}
+.insertionSection{
+    background-color:#363636;
+    height:fit-content;
+    position: relative;
+    padding: 0.5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+.insertionSection > span:hover{
+    background-color: rgba(255, 255, 255, 0.804);
+    border-radius: 4px;
+}
+.insertionSection > span{
+    display: none;
+    font-size: 22px;
+    margin-right: 5px;
+}
+.insertionSection:has(input:focus) > span {
+    display: flex;
+}
+.insertionSection input{
+    background: transparent;
+    border:0;
+    padding: 6px;
+}
+.insertionSection:hover {
+    background-color: #202020;
+}
+.insertionSection > input:focus + .insertionSectionPlaceholder{
+    display: none;
+}
+.insertionSection > input:focus{
+    width: 400px;
+    outline:none
+}
+.insertionSection:has(input:focus){
+    background-color: #202020;
+} 
+.insertionSectionPlaceholder span{
+    font-size: 20px;
+}
+
+body{
+    margin:0;
+    background-color: #202020;
+}
