@@ -156,7 +156,7 @@ body{
     margin-right: 3.5px;
     font-size: 23px;
 }
-.right{
+.navbar > .right{
     padding-right: 17px;
 }
 .right > span {
