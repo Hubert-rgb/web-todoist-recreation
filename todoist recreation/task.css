@@ -1,0 +1,74 @@
+.taskInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.outerTask{
+    position: relative;
+}
+.outerTask > span{
+    width: 22px;
+    height: 22px;
+    left: 47px;
+    position:absolute;
+    top:1px;
+}
+.outerTask > .right > span{
+    width: 22px;
+    height: 22px;
+    right: 42px;
+    position:absolute;
+    top:0px;
+}
+.innerTask{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.taskInfo p{
+    font-size: 14px;
+    color: rgb(226, 226, 226);
+    padding: 3.5px;
+    margin-left: 5px;
+}
+.outerTask span{
+    display: none;
+}
+.outerTask:hover span{
+    display: block;
+}
+.taskInfo > .left{
+    display: flex;
+    align-items: center;
+}
+.taskDate{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.taskDate p{
+    font-size: 12px;
+    padding: 1px;
+    color: #9866e3;
+}
+.taskDate span{
+    display: block;
+    font-size: 15px;
+    padding: 0;
+    font-weight: 300;
+    color: #9866e3;
+}
+.inbox input[type="radio"]{
+    appearance: none;
+    color: #a3a3a3;
+    font: inherit;
+    width: 18px;
+    height: 18px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+}
+.innerTask hr{
+    border: none;
+    height: 0.15px;
+    background-color: #323232;
+    margin: 10px;
+}
