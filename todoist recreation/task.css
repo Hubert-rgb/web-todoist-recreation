@@ -72,3 +72,26 @@
     background-color: #323232;
     margin: 10px;
 }
+.selectAddTask{
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+}
+.selectAddTask p{
+    font-size: 14px;
+}
+.selectAddTask span{
+    color: #de4c4a;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.selectAddTask:hover p{
+    color: #c53727;
+}
+.selectAddTask:hover span{
+    color: hsla(0,0%,100%,0.87);
+    background-color: #de4c4a;
+    border-radius: 115px;
+}
