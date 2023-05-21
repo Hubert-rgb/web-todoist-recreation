@@ -1,0 +1,64 @@
+.innerSectionHeader{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.innerSectionHeader > .firstLine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.innerSectionHeader hr{
+    margin-top: 5px;
+}
+.innerSectionHeader .left{
+    display: flex;
+    align-items: center;
+}
+.innerSectionHeader .left p{
+    margin-left: 5px;
+    font-size: 12px;
+}
+.section .outerSectionHeader{
+    position:relative;
+}
+.section .outerSectionHeader .collapser{
+    position: absolute;
+    top:3px;
+    left: 44px;
+    height: 22px;
+    width: 22px;
+}
+.section .outerSectionHeader .collapser > span{
+    font-size: 20px;
+    padding: 1px;
+}
+.section .outerSectionHeader .dragIndicator{
+    position: absolute;
+    top:2px;
+    left: 22px;
+    visibility:hidden;
+    height: 22px;
+    width:22px;
+}
+.section .outerSectionHeader .dragIndicator span{
+    font-size: 20px;
+    padding: 1px;
+    font-weight: 400;
+}
+.sectionHeader:hover .outerSectionHeader .dragIndicator{
+    visibility: visible;
+}
+.sectionHeader .outerSectionHeader .dragIndicator:hover{
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.sectionHeader .outerSectionHeader .dragIndicator:hover span{
+    color: rgb(226, 226, 226);
+}
+.sectionHeader .outerSectionHeader .collapser:hover{
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.sectionHeader .outerSectionHeader .collapser:hover span{
+    color: rgb(226, 226, 226);
+}

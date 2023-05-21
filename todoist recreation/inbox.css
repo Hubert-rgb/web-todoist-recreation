@@ -83,3 +83,39 @@
 .inbox .right a:hover p{
     color:rgb(226, 226, 226);
 }
+.inbox h5{
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(226, 226, 226);
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Noto,Oxygen-Sans,Ubuntu,
+    Cantrell,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji",
+    "Segoe UI Symbol";
+    margin: 0px;
+}
+.selectAddSection{
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+}
+.selectAddSection h5{
+    visibility: hidden;
+    margin: 10px;
+    white-space: nowrap;
+}
+.selectAddSection hr{
+    visibility: hidden;
+    width: 100%;
+    height: 0.15px;
+    border: none;
+    background-color: #6c3131;
+}
+.selectAddSection:hover > hr{
+    visibility: visible;
+}
+.selectAddSection:hover > h5{
+    visibility: visible;
+}
+.mainSection{
+    margin-bottom: 5px;
+}
