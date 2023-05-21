@@ -1,6 +1,14 @@
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .inbox{
     position:relative;
     margin-left:300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
 }
 .inbox button{
     background-color: transparent;
@@ -118,4 +126,21 @@
 }
 .mainSection{
     margin-bottom: 5px;
+}
+@media all and (max-width: 750px) {
+    .sideBar{
+        display: none;
+    }
+    .inbox{
+        margin-left: 0;
+    }
+    .upgradeToPro > p{
+        display: none;
+    }
+    .productivity p{
+        display: none;
+    }
+    .insertionSection input{
+        width: 100%;
+    }
 }

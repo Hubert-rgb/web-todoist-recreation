@@ -36,6 +36,9 @@
     color: rgb(226, 226, 226);
     padding: 3.5px;
     margin-left: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 85%;
 }
 .outerTask span{
     display: none;
@@ -65,6 +68,7 @@
     color: #9866e3;
 }
 .inbox input[type="radio"]{
+    display: inline-block;
     appearance: none;
     color: #a3a3a3;
     font: inherit;
@@ -73,6 +77,7 @@
     border: 1px solid currentColor;
     border-radius: 50%;
     margin-left: 0;
+    resize: none;
 }
 hr{
     border: none;

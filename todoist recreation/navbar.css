@@ -62,6 +62,7 @@
 .upgradeToPro{
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 .productivity{
     display: flex;
@@ -76,6 +77,9 @@
     display: flex;
     align-items: center;
     margin-left: 5px;
+}
+.insertionSection input, textarea{
+    color: rgb(226, 226, 226);
 }
 .insertionSection > span:hover{
     background-color: rgba(255, 255, 255, 0.804);
@@ -93,6 +97,7 @@
     background: transparent;
     border:0;
     padding: 6px;
+    text-transform: none;
 }
 .insertionSection:hover {
     background-color: #202020;
