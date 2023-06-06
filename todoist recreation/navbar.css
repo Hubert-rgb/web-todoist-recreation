@@ -14,11 +14,11 @@
     font-size: 25px;
     color: hsla(0,0%,100%,.87);
 }
-.left > span:hover {
+.navbar .left span:hover {
     background-color: hsla(0,0%,100%,0.3);
     border-radius: 3px;
 }
-.left > span {
+.navbar .left span {
     padding: 2px;
     margin: 1px;
 }

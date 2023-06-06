@@ -6,9 +6,15 @@ html, body{
     position:relative;
     margin-left:300px;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-
+    align-items: center;
+}
+.inboxContent{
+    margin:auto;
+}
+.inbox > div{
+    max-width: 1000px;
+    min-width: 500px;
+    width: 100%;
 }
 .inbox button{
     background-color: transparent;
@@ -74,10 +80,11 @@ html, body{
 }
 .inbox .right button{
     padding: 0;
-    margin: 15px;
+    margin-left: 15px;
 }
 .inbox .right a{
     padding: 0;
+    margin-left: 15px;
 }
 .inbox .right button:hover p{
     color: rgb(226, 226, 226);
@@ -142,5 +149,11 @@ html, body{
     }
     .insertionSection input{
         width: 100%;
+    }
+    .innerTask > .right{
+        display: none;
+    }
+    .inbox > div{
+        min-width: none;
     }
 }
