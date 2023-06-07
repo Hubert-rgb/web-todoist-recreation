@@ -112,10 +112,10 @@
 .addTask .bottomButtons .cancelButton:hover{
     background-color: #363636;
 }
-.addTask .bottomButtons .AddTaskButton:hover{
+.addTask .bottomButtons .addTaskButton:hover{
     background-color: #c53727;
 }
-.addTask .bottomButtons .AddTaskButton{
+.addTask .bottomButtons .addTaskButton{
     background-color: #de4c4a;
     padding-left: 10px;
     padding-right: 10px;
@@ -124,13 +124,13 @@
     border-radius: 5px;
     cursor: auto;
 }
-.addTask .bottomButtons .AddTaskButton p{
+.addTask .bottomButtons .addTaskButton p{
     color: rgb(255,255,255);
 }
-.addTask:has(textarea:placeholder-shown) .bottomButtons .AddTaskButton{
+.addTask:has(.taskNameInput textarea:placeholder-shown) .bottomButtons .addTaskButton{
     background-color: #6b312c;
     cursor: not-allowed;
 }
-.addTask:has(textarea:placeholder-shown) .bottomButtons .AddTaskButton p{
+.addTask:has(.taskNameInput textarea:placeholder-shown) .bottomButtons .addTaskButton p{
     color: #b59895;
 }
