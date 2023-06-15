@@ -1,3 +1,5 @@
+//add task button
+
 const addTaskButtons = document.getElementsByClassName('addTaskButton');
 
 let taskButtonsArray = Array.from(addTaskButtons)
@@ -45,7 +47,6 @@ taskButtonsArray.forEach(taskButton => {
 
             var addTaskWindow = taskButton.closest(".addTask");
             console.log(taskButton)
-            addTaskWindow.remove();
 
             if (section != null){
                 section.insertAdjacentHTML('beforeend', htmlTask);
@@ -53,10 +54,74 @@ taskButtonsArray.forEach(taskButton => {
                 section = taskButton.closest(".mainSection");
                 section.insertAdjacentHTML('beforeend', htmlTask);
             }
-            
-            section.querySelectorAll()
         }
         //create add task section()
     }
 })
 
+//add task window button
+
+const selectAddTasks = document.getElementsByClassName("selectAddTask");
+let selectAddTaskArray = Array.from(selectAddTasks);
+console.log(selectAddTasks);
+
+selectAddTaskArray.forEach(selectAddTask =>{
+    selectAddTask.addEventListener('click', () => {
+        var section = selectAddTask.closest(".section")
+
+        if (section == null){
+            section = selectAddTask.closest(".mainSection")
+        }
+        var addTask = section.querySelector(".addTask");
+        addTask.style.display = "block"
+        selectAddTask.style.display = "none";
+    });
+})
+
+//cancel task button
+const cancleButtons = document.getElementsByClassName("cancelButton");
+let cancelButtonArray = Array.from(cancleButtons);
+console.log(cancelButtonArray);
+
+cancelButtonArray.forEach(cancelButton =>{
+    cancelButton.addEventListener('click', () => {
+        var section = cancelButton.closest(".section")
+
+        if (section == null){
+            section = cancelButton.closest(".mainSection")
+        }
+        var addTask = section.querySelector(".addTask");
+        addTask.style.display = "none"
+        
+        var selectAddTask = section.querySelector(".selectAddTask")
+        selectAddTask.style.display = "flex";
+    });
+})
+
+//cancel task by escape key
+
+document.addEventListener('keydown', (event) => {
+    console.log("1")
+    if (event.key == 'Escape'){
+        var sections = document.querySelectorAll(".section")
+        var mainSection = document.querySelector(".mainSection")
+
+        console.log(sections)
+        sections.forEach(section => {
+            console.log(section)
+
+            var addTask = section.querySelector(".addTask");
+            addTask.style.display = "none"
+
+            var selectAddTask = section.querySelector(".selectAddTask")
+            selectAddTask.style.display = "flex";
+        })
+        var addTask = mainSection.querySelector(".addTask");
+        addTask.style.display = "none"
+
+        var selectAddTask = mainSection.querySelector(".selectAddTask")
+        selectAddTask.style.display = "flex";        
+    }
+})
+
+//add task by enter button
