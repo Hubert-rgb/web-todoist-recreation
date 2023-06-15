@@ -121,3 +121,14 @@ document.addEventListener('keydown', (event) => {
 
 //add task by enter button
 //won't be don yet 
+
+//check task
+
+var checkButtons = document.querySelectorAll(".tasks .innerTask input[type=\"radio\"]")
+
+checkButtons.forEach(checkButton => {
+    checkButton.onclick = function(){
+        var outerTask = checkButton.closest(".outerTask")
+        outerTask.remove(); 
+    }
+})
