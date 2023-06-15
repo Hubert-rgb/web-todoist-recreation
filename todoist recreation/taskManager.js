@@ -11,6 +11,7 @@ taskButtonsArray.forEach(taskButton => {
         if (cursorStyle != "not-allowed"){
             const taskNameField = taskButton.closest(".addTask").querySelector(".taskNameInput textarea");
             const taskName = taskNameField.value;
+            taskNameField.value = "";
 
             const taskDescriptionField = taskButton.closest(".addTask").querySelector(".taskDescriptionInput textarea");
             const taskDescription = taskDescriptionField.value;
@@ -42,20 +43,15 @@ taskButtonsArray.forEach(taskButton => {
                 </div>
             `;
 
-            var section = taskButton.closest(".section");
-            console.log(section); 
+            var section = taskButton.closest(".section"); 
 
-            var addTaskWindow = taskButton.closest(".addTask");
-            console.log(taskButton)
-
-            if (section != null){
-                section.insertAdjacentHTML('beforeend', htmlTask);
-            } else {
+            if (section == null){
                 section = taskButton.closest(".mainSection");
-                section.insertAdjacentHTML('beforeend', htmlTask);
             }
+            var tasks = section.querySelector(".tasks");
+            console.log(tasks)
+            tasks.insertAdjacentHTML('beforeend', htmlTask);
         }
-        //create add task section()
     }
 })
 
@@ -101,7 +97,6 @@ cancelButtonArray.forEach(cancelButton =>{
 //cancel task by escape key
 
 document.addEventListener('keydown', (event) => {
-    console.log("1")
     if (event.key == 'Escape'){
         var sections = document.querySelectorAll(".section")
         var mainSection = document.querySelector(".mainSection")
@@ -125,3 +120,4 @@ document.addEventListener('keydown', (event) => {
 })
 
 //add task by enter button
+//won't be don yet 
