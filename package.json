@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "no-cors-proxy": "^1.0.5"
+  },
+  "name": "frontend-learning",
+  "proxy": "http://localhost:8080",
+  "description": "Recreating main page of Todoist for Frontend decelopment learning purpose",
+  "version": "1.0.0",
+  "main": "addTask.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hubert-rgb/web-todoist-recreation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hubert-rgb/web-todoist-recreation/issues"
+  },
+  "homepage": "https://github.com/Hubert-rgb/web-todoist-recreation#readme"
+}

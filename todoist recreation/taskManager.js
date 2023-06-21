@@ -25,7 +25,7 @@ taskButtonsArray.forEach(taskButton => {
                     <div class="innerTask">
                         <div class="taskInfo">
                             <div class="left">
-                                <input type="radio">
+                                <input onclick="checkTask(this)" type="radio">
                                 <p>`+taskName+`</p>
                             </div>
                             <div class="right">
@@ -127,8 +127,28 @@ document.addEventListener('keydown', (event) => {
 var checkButtons = document.querySelectorAll(".tasks .innerTask input[type=\"radio\"]")
 
 checkButtons.forEach(checkButton => {
-    checkButton.onclick = function(){
-        var outerTask = checkButton.closest(".outerTask")
-        outerTask.remove(); 
-    }
+        checkButton.onclick = function() {checkTask(checkButton)};
 })
+function checkTask(checkButton){
+    var outerTask = checkButton.closest(".outerTask")
+    outerTask.remove(); 
+}
+
+
+//no cors proxy
+// const NoCorsProxy = require('no-cors-proxy');
+// const port = 8080;
+// const host = 'localhost';
+// const target = 'http://some.api.com';
+
+// const proxy = new NoCorsProxy(port, host, target)
+// proxy.start();
+//getting tasks
+const getTasksRequest = new XMLHttpRequest();
+const url = "http://localhost:8080/task"
+getTasksRequest.open("GET", url);
+getTasksRequest.send();
+
+getTasksRequest.onreadystatechange=(e)=>{
+    console.log(getTasksRequest.responseText)
+}
