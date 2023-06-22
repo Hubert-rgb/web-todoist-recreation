@@ -1,0 +1,187 @@
+.navbar{
+    padding-left: 10px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsla(0,0%,100%,.87);
+}
+.navbar > div {
+    margin: 6px;
+}
+.navbar span{
+    font-weight: 200;
+    font-size: 25px;
+    color: hsla(0,0%,100%,.87);
+}
+.navbar .left span:hover {
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.navbar .left span {
+    padding: 2px;
+    margin: 1px;
+}
+.insertionSection > input::placeholder{
+    color: #ffff;
+}
+.insertionSection span{
+    color: #ffff;
+    margin: 3px;
+}
+.insertionSection:hover > input::placeholder{
+    color: #a3a3a3;
+}
+.insertionSection:hover span{
+    color: #a3a3a3;
+}
+.insertionSection:hover > input::placeholder{
+    color: #a3a3a3;
+}
+.insertionSection.insertionSection:has(input:focus) span{
+    color: #a3a3a3;
+}
+.insertionSection.insertionSection:has(input:focus) input::placeholder{
+    color: #a3a3a3;
+}
+.navbar p {
+    margin: 0;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Noto,Oxygen-Sans,Ubuntu,
+    Cantrell,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.navbar > .right{
+    display: flex;
+    align-items: center;
+}
+.navbar > .left{
+    display: flex;
+    align-items: center;
+}
+
+.upgradeToPro{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.productivity{
+    display: flex;
+    align-items: center;
+}
+.insertionSection{
+    background-color:#363636;
+    height:fit-content;
+    position: relative;
+    padding: 0.5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+.insertionSection input, textarea{
+    color: rgb(226, 226, 226);
+}
+.insertionSection > span:hover{
+    background-color: rgba(255, 255, 255, 0.804);
+    border-radius: 4px;
+}
+.insertionSection > span{
+    display: none;
+    font-size: 22px;
+    margin-right: 5px;
+}
+.insertionSection:has(input:focus) > span {
+    display: flex;
+}
+.insertionSection input{
+    background: transparent;
+    border:0;
+    padding: 6px;
+    text-transform: none;
+}
+.insertionSection:hover {
+    background-color: #202020;
+}
+.insertionSection > input:focus + .insertionSectionPlaceholder{
+    display: none;
+}
+.insertionSection > input:focus{
+    width: 400px;
+    outline:none
+}
+.insertionSection:has(input:focus){
+    background-color: #202020;
+} 
+.insertionSectionPlaceholder span{
+    font-size: 20px;
+}
+
+body{
+    margin:0;
+    background-color: #202020;
+}
+.upgradeToPro > span {
+    color: #ffd093;
+    font-variation-settings:
+    'FILL' 1;
+}
+.upgradeToPro{
+    background-color: #363636;
+    border-radius: 5px;
+}
+.right > span:hover {
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.upgradeToPro:hover{
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.productivity:hover{
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+}
+.upgradeToPro p {
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.upgradeToPro span{
+    margin-left: 3px;
+}
+.right > div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.right > span{
+    margin-left: 3.5px;
+    margin-right: 3.5px;
+    font-size: 23px;
+}
+.navbar > .right{
+    padding-right: 17px;
+}
+.right > span {
+    padding: 2px;
+    
+}
+.productivity > span{
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+.productivity p{
+    font-size: 13px;
+}
+.productivityIndexPresentation{
+    display: flex;
+    align-items: center;
+}
+.productivityIndexPresentation{
+    padding-right: 7px;
+    padding-left: 3px;
+}

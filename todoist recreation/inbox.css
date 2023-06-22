@@ -1,0 +1,159 @@
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.inbox{
+    position:relative;
+    margin-left:300px;
+    display: flex;
+    align-items: center;
+}
+.inboxContent{
+    margin:auto;
+}
+.inbox > div{
+    max-width: 1000px;
+    min-width: 500px;
+    width: 100%;
+}
+.inbox button{
+    background-color: transparent;
+    border-width: 0;
+}
+.inboxHead{
+    margin-top:30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inbox .right{
+    display: flex;
+    align-items: center;
+}
+.selectView{
+    display: flex;
+    align-items: center;
+}
+.selectComments{
+    display: flex;
+    align-items: center;
+}
+.inbox h3{
+    font-size: 20px;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Noto,Oxygen-Sans,Ubuntu,
+    Cantrell,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji",
+    "Segoe UI Symbol";
+    color: rgb(226, 226, 226);
+    margin: 0;
+    
+}
+.inbox p{
+    font-size: 12px;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Noto,Oxygen-Sans,Ubuntu,
+    Cantrell,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji",
+    "Segoe UI Symbol";
+    color: #a3a3a3;
+    margin: 0;
+    padding: 3px;
+}
+.inbox span{
+    font-size: 22px;
+    color: #a3a3a3;
+    font-weight: 200;
+    padding: 2px;
+}
+.inbox a{
+    text-decoration: none;
+}
+.inbox .right button:hover{
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+    padding: 0;
+}
+.inbox .right a:hover{
+    background-color: hsla(0,0%,100%,0.3);
+    border-radius: 3px;
+    padding: 0;
+}
+.inbox .right button{
+    padding: 0;
+    margin-left: 15px;
+}
+.inbox .right a{
+    padding: 0;
+    margin-left: 15px;
+}
+.inbox .right button:hover p{
+    color: rgb(226, 226, 226);
+}
+.inbox .right button:hover span{
+    color: rgb(226, 226, 226);
+}
+.inbox .right a:hover span{
+    color:rgb(226, 226, 226);
+}
+.inbox .right a:hover p{
+    color:rgb(226, 226, 226);
+}
+.inbox h5{
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(226, 226, 226);
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Noto,Oxygen-Sans,Ubuntu,
+    Cantrell,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji",
+    "Segoe UI Symbol";
+    margin: 0px;
+}
+.selectAddSection{
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+}
+.selectAddSection h5{
+    visibility: hidden;
+    margin: 10px;
+    white-space: nowrap;
+}
+.selectAddSection hr{
+    visibility: hidden;
+    width: 100%;
+    height: 0.15px;
+    border: none;
+    background-color: #6c3131;
+}
+.selectAddSection:hover > hr{
+    visibility: visible;
+}
+.selectAddSection:hover > h5{
+    visibility: visible;
+}
+.mainSection{
+    margin-bottom: 5px;
+}
+@media all and (max-width: 750px) {
+    .sideBar{
+        display: none;
+    }
+    .inbox{
+        margin-left: 0;
+    }
+    .upgradeToPro > p{
+        display: none;
+    }
+    .productivity p{
+        display: none;
+    }
+    .insertionSection input{
+        width: 100%;
+    }
+    .innerTask > .right{
+        display: none;
+    }
+    .inbox > div{
+        min-width: none;
+    }
+}

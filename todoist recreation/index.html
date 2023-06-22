@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox: Todoist(moja kopia)</title>
+    <link rel="icon" href="28174051188_215180e097a3dd513d6d_512.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="inbox.css">
+    <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="addTask.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <div class="menuButton">
+                <span class="material-symbols-outlined">menu </span>
+            </div>
+            <span class="material-symbols-outlined">home</span>
+            <div class="insertionSection">
+                <div class="insertionSectionPlaceholder">
+                    <span class="material-symbols-outlined">Search</span>
+                </div>
+                <input type="text" id="search" placeholder="Search">
+                <span class="material-symbols-outlined">help</span>
+                <span class="material-symbols-outlined">close</span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="upgradeToPro">
+                <span class="material-symbols-outlined">star</span>
+                <p>Upgrade to Pro</p>
+            </div>
+            <span class="material-symbols-outlined">add</span>
+            <div class="productivity">
+                <span class="material-symbols-outlined">trending_up</span>
+                <div class="productivityIndexPresentation">
+                    <p id="productivityIndex">0</p>
+                    <p>/</p>
+                    <p id="productivityGoal">5</p>
+                </div>
+            </div>
+            <span class="material-symbols-outlined">help</span>
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="googleIcon">logo</span>
+        </div>
+    </div>
+    <div class="sideBar">
+        <div class="constantElements">
+            <div class="selectInbox">
+                <span class="material-symbols-outlined">inbox</span>
+                <p>Inbox</p>
+            </div>
+            <div class="selectToday">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <p id="currentDate"></p>
+                <p>Today</p>
+            </div>
+            <div class="selectUpcoming">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <p>Upcoming</p>
+            </div>
+            <div class="selectFiltersAndLabels">
+                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <path d="M464 144H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H212V212h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H612V212h200v200zM464 544H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H212V612h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H612V612h200v200z"/>
+                </svg>
+                <p>Filters & Labels</p>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="projectsLabel">
+                <p>Projects</p>
+                <div class="right">
+                    <span class="material-symbols-outlined">add</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="inbox">
+        <div class="inboxContent">
+            <div class="inboxHead">
+                <h3>Inbox</h3>
+                <div class="right">
+                    <button class="selectView">
+                        <span class="material-symbols-outlined">tune</span>
+                        <p>View</p>
+                    </button>
+                    <a class="selectComments" href="/comments">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        <p>Comments</p>
+                    </a>
+                    <button class="selectMore">
+                        <span class="material-symbols-outlined">more_horiz</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mainSection">
+                <div class="tasks">
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input type="radio">
+                                    <p>opis warunków na akwenach</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <div class="taskDate">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                <p>Wednesday</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="addTask">
+                    <div class="top">
+                        <div class="taskNameInput">
+                            <textarea placeholder="Task name" rows="1"></textarea>
+                        </div>
+                        <div class="taskDescriptionInput">
+                            <textarea placeholder="Description" rows="1"></textarea>
+                        </div>
+                        <div class="additionalOptionsBar">
+                            <div class="selectDueDate">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                <p>Due date</p>
+                            </div>
+                            <div class="selectPriority">
+                                <span class="material-symbols-outlined">flag</span>
+                                <p>Priority</p>
+                            </div>
+                            <div class="selectReminders">
+                                <span class="material-symbols-outlined">alarm</span>
+                                <p>Reminders</p>
+                                <div class="pro">
+                                    <p>PRO</p>
+                                </div>
+                            </div>
+                            <div class="selectAddMore">
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="bottomButtons">
+                        <div class="left">
+                            <div class="selectProject">
+                                <span class="material-symbols-outlined">inbox</span>
+                                <p>Inbox</p>
+                                <div class="dropDownArrow"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="cancelButton">
+                                <p>Cancel</p>
+                            </div>
+                            <div class="addTaskButton">
+                                <p>Add task</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="selectAddTask">
+                    <span class="material-symbols-outlined">add</span>
+                    <p>Add task</p>
+                </div>
+            </div>
+            <div class="selectAddSection">
+                <hr>
+                <h5>Add section</h5>
+                <hr>
+            </div>
+            <div class="section">
+                <div class="tasks">
+                    <div class="sectionHeader">
+                        <div class="outerSectionHeader">
+                            <div class="dragIndicator">
+                                <span class="material-symbols-outlined">drag_indicator</span>
+                            </div>
+                            <div class="collapser">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="innerSectionHeader">
+                            <div class="firstLine">
+                                <div class="left">
+                                    <h5>zakupy</h5>
+                                    <p class="taskNumberIndicator">1</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">more_horiz</span>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input type="radio">
+                                    <p>napiszę jakiś mega długi </p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input type="radio">
+                                    <p>Pianka</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="addTask">
+                    <div class="top">
+                        <div class="taskNameInput">
+                            <textarea placeholder="Task name" rows="1"></textarea>
+                        </div>
+                        <div class="taskDescriptionInput">
+                            <textarea placeholder="Description" rows="1"></textarea>
+                        </div>
+                        <div class="additionalOptionsBar">
+                            <div class="selectDueDate">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                <p>Due date</p>
+                            </div>
+                            <div class="selectPriority">
+                                <span class="material-symbols-outlined">flag</span>
+                                <p>Priority</p>
+                            </div>
+                            <div class="selectReminders">
+                                <span class="material-symbols-outlined">alarm</span>
+                                <p>Reminders</p>
+                                <div class="pro">
+                                    <p>PRO</p>
+                                </div>
+                            </div>
+                            <div class="selectAddMore">
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="bottomButtons">
+                        <div class="left">
+                            <div class="selectProject">
+                                <span class="material-symbols-outlined">inbox</span>
+                                <p>Inbox</p>
+                                <div class="dropDownArrow"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="cancelButton">
+                                <p>Cancel</p>
+                            </div>
+                            <div class="addTaskButton">
+                                <p>Add task</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="selectAddTask">
+                    <span class="material-symbols-outlined">add</span>
+                    <p>Add task</p>
+                </div>
+            </div>
+            <div class="selectAddSection">
+                <hr>
+                <h5>Add section</h5>
+                <hr>
+            </div>
+            <div class="section">
+                <div class="tasks">
+                    <div class="sectionHeader">
+                        <div class="outerSectionHeader">
+                            <div class="dragIndicator">
+                                <span class="material-symbols-outlined">drag_indicator</span>
+                            </div>
+                            <div class="collapser">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="innerSectionHeader">
+                            <div class="firstLine">
+                                <div class="left">
+                                    <h5>zakupy</h5>
+                                    <p class="taskNumberIndicator">1</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">more_horiz</span>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input type="radio">
+                                    <p>napiszę jakiś mega długi </p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input type="radio">
+                                    <p>Pianka</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="addTask">
+                    <div class="top">
+                        <div class="taskNameInput">
+                            <textarea placeholder="Task name" rows="1"></textarea>
+                        </div>
+                        <div class="taskDescriptionInput">
+                            <textarea placeholder="Description" rows="1"></textarea>
+                        </div>
+                        <div class="additionalOptionsBar">
+                            <div class="selectDueDate">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                <p>Due date</p>
+                            </div>
+                            <div class="selectPriority">
+                                <span class="material-symbols-outlined">flag</span>
+                                <p>Priority</p>
+                            </div>
+                            <div class="selectReminders">
+                                <span class="material-symbols-outlined">alarm</span>
+                                <p>Reminders</p>
+                                <div class="pro">
+                                    <p>PRO</p>
+                                </div>
+                            </div>
+                            <div class="selectAddMore">
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="bottomButtons">
+                        <div class="left">
+                            <div class="selectProject">
+                                <span class="material-symbols-outlined">inbox</span>
+                                <p>Inbox</p>
+                                <div class="dropDownArrow"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="cancelButton">
+                                <p>Cancel</p>
+                            </div>
+                            <div class="addTaskButton">
+                                <p>Add task</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="selectAddTask">
+                    <span class="material-symbols-outlined">add</span>
+                    <p>Add task</p>
+                </div>
+            </div>
+            <div class="selectAddSection">
+                <hr>
+                <h5>Add section</h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="taskManager.js"></script>
+<!-- TODO inbox as a centralised flexbox with fixed max width and changable while display is under 1200px -->
