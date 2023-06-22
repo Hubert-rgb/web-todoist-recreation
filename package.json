@@ -1,13 +1,15 @@
 {
   "dependencies": {
-    "no-cors-proxy": "^1.0.5"
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "no-cors-proxy": "^1.0.5",
+    "request": "^2.88.2"
   },
   "name": "frontend-learning",
   "proxy": "http://localhost:8080",
   "description": "Recreating main page of Todoist for Frontend decelopment learning purpose",
   "version": "1.0.0",
   "main": "addTask.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

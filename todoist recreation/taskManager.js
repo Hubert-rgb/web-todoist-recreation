@@ -1,3 +1,4 @@
+
 //add task button
 
 const addTaskButtons = document.getElementsByClassName('addTaskButton');
@@ -19,30 +20,6 @@ taskButtonsArray.forEach(taskButton => {
             console.log(taskName);
             console.log(taskDescription);
 
-            const htmlTask = `
-                <div class="outerTask">
-                    <span class="material-symbols-outlined">drag_indicator</span>
-                    <div class="innerTask">
-                        <div class="taskInfo">
-                            <div class="left">
-                                <input onclick="checkTask(this)" type="radio">
-                                <p>`+taskName+`</p>
-                            </div>
-                            <div class="right">
-                                <span class="material-symbols-outlined">border_color</span>
-                            <span class="material-symbols-outlined">event</span>
-                            <span class="material-symbols-outlined">chat_bubble</span>
-                            </div>
-                            
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="right">
-                        <span class="material-symbols-outlined">more_horiz</span>
-                    </div>
-                </div>
-            `;
-
             var section = taskButton.closest(".section"); 
 
             if (section == null){
@@ -50,7 +27,44 @@ taskButtonsArray.forEach(taskButton => {
             }
             var tasks = section.querySelector(".tasks");
             console.log(tasks)
+
+            const htmlTask = `
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input onclick="checkTask(this)" type="radio">
+                                    <p>`+taskName+`</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                `;
+
             tasks.insertAdjacentHTML('beforeend', htmlTask);
+
+            //save task
+            const getTasksRequest = new XMLHttpRequest();
+            const url = "http://localhost:8080/task"
+            getTasksRequest.open("POST", url);
+            getTasksRequest.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
+            
+            const body = JSON.stringify({
+                taskName: taskName
+            })
+            console.log(body)
+            getTasksRequest.send(body);
         }
     }
 })
@@ -134,21 +148,47 @@ function checkTask(checkButton){
     outerTask.remove(); 
 }
 
-
-//no cors proxy
-// const NoCorsProxy = require('no-cors-proxy');
-// const port = 8080;
-// const host = 'localhost';
-// const target = 'http://some.api.com';
-
-// const proxy = new NoCorsProxy(port, host, target)
-// proxy.start();
 //getting tasks
 const getTasksRequest = new XMLHttpRequest();
 const url = "http://localhost:8080/task"
 getTasksRequest.open("GET", url);
+getTasksRequest.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
 getTasksRequest.send();
 
-getTasksRequest.onreadystatechange=(e)=>{
-    console.log(getTasksRequest.responseText)
+getTasksRequest.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200){
+        const response = getTasksRequest.responseText;
+        const responseObject = JSON.parse(response);
+        console.log(responseObject);
+        
+        var mainSection = document.querySelector(".mainSection .tasks");
+        responseObject.forEach(task =>{
+            var taskName = task.taskName
+            const htmlTask = `
+                    <div class="outerTask">
+                        <span class="material-symbols-outlined">drag_indicator</span>
+                        <div class="innerTask">
+                            <div class="taskInfo">
+                                <div class="left">
+                                    <input onclick="checkTask(this)" type="radio">
+                                    <p>`+taskName+`</p>
+                                </div>
+                                <div class="right">
+                                    <span class="material-symbols-outlined">border_color</span>
+                                <span class="material-symbols-outlined">event</span>
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </div>
+                    </div>
+                `;
+            console.log(taskName)
+            mainSection.insertAdjacentHTML('beforeend', htmlTask);
+        })
+    }
 }
