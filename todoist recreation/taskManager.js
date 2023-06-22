@@ -28,43 +28,51 @@ taskButtonsArray.forEach(taskButton => {
             var tasks = section.querySelector(".tasks");
             console.log(tasks)
 
-            const htmlTask = `
-                    <div class="outerTask">
-                        <span class="material-symbols-outlined">drag_indicator</span>
-                        <div class="innerTask">
-                            <div class="taskInfo">
-                                <div class="left">
-                                    <input onclick="checkTask(this)" type="radio">
-                                    <p>`+taskName+`</p>
-                                </div>
-                                <div class="right">
-                                    <span class="material-symbols-outlined">border_color</span>
-                                <span class="material-symbols-outlined">event</span>
-                                <span class="material-symbols-outlined">chat_bubble</span>
-                                </div>
-                                
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="right">
-                            <span class="material-symbols-outlined">more_horiz</span>
-                        </div>
-                    </div>
-                `;
-
-            tasks.insertAdjacentHTML('beforeend', htmlTask);
-
             //save task
-            const getTasksRequest = new XMLHttpRequest();
+            const postTasksRequest = new XMLHttpRequest();
             const url = "http://localhost:8080/task"
-            getTasksRequest.open("POST", url);
-            getTasksRequest.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
+            postTasksRequest.open("POST", url);
+            postTasksRequest.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
             
             const body = JSON.stringify({
                 taskName: taskName
             })
-            console.log(body)
-            getTasksRequest.send(body);
+            postTasksRequest.onload = () => {
+                if (postTasksRequest.readyState == 4 && postTasksRequest.status == 200) {
+                  const response = JSON.parse(postTasksRequest.responseText);
+                  const id = response.id
+                  console.log(id)
+
+                  const htmlTask = `
+                        <div id=`+id+` class="outerTask">
+                            <span class="material-symbols-outlined">drag_indicator</span>
+                            <div class="innerTask">
+                                <div class="taskInfo">
+                                    <div class="left">
+                                        <input onclick="checkTask(this)" type="radio">
+                                        <p>`+taskName+`</p>
+                                    </div>
+                                    <div class="right">
+                                        <span class="material-symbols-outlined">border_color</span>
+                                    <span class="material-symbols-outlined">event</span>
+                                    <span class="material-symbols-outlined">chat_bubble</span>
+                                    </div>
+                                    
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="right">
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                        </div>
+                    `;
+
+                  tasks.insertAdjacentHTML('beforeend', htmlTask);
+                } else {
+                  console.log(`Error: ${postTasksRequest.status}`);
+                }
+              };
+            postTasksRequest.send(body);
         }
     }
 })
@@ -146,6 +154,14 @@ checkButtons.forEach(checkButton => {
 function checkTask(checkButton){
     var outerTask = checkButton.closest(".outerTask")
     outerTask.remove(); 
+
+    var id = outerTask.id;
+
+    const getTasksRequest = new XMLHttpRequest();
+    const url = "http://localhost:8080/task/" + id;
+    getTasksRequest.open("PUT", url);
+    getTasksRequest.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
+    getTasksRequest.send();
 }
 
 //getting tasks
@@ -164,8 +180,9 @@ getTasksRequest.onreadystatechange = function(){
         var mainSection = document.querySelector(".mainSection .tasks");
         responseObject.forEach(task =>{
             var taskName = task.taskName
+            var id = task.id;
             const htmlTask = `
-                    <div class="outerTask">
+                    <div id=`+id+` class="outerTask">
                         <span class="material-symbols-outlined">drag_indicator</span>
                         <div class="innerTask">
                             <div class="taskInfo">
